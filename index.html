@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshitha S | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f8fafc, #eef2f7);
+      color: #1f2937;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: #ffffff;
+      padding: 90px 20px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 4.2rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .branch {
+      color: #4f46e5;
+      font-weight: 600;
+    }
+
+    .profile-img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #4f46e5;
+      box-shadow: 0 20px 40px rgba(79,70,229,0.25);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      max-width: 950px;
+      margin: 55px auto;
+      padding: 50px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #1e40af;
+      font-size: 2rem;
+      font-weight: 700;
+      border-bottom: 3px solid #bfdbfe;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: #eef2ff;
+      color: #1f2937;
+      padding: 22px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      border: 1px solid #c7d2fe;
+    }
+
+    /* ---------- LINKS ---------- */
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <div>
+        <h1>Harshitha S</h1>
+        <p>Engineering Student</p>
+        <p class="branch">Computer Science & Business Systems</p>
+      </div>
+
+      <img src="profile.jpg" alt="Harshitha S" class="profile-img">
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="reveal">
+    <h2>About Me</h2>
+    <p>
+      I am an engineering student pursuing Computer Science and Business Systems at
+      Maharaja Institute of Technology. I am passionate about problem solving,
+      logical thinking, and building real-world applications.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="reveal">
+    <h2>Education</h2>
+    <p>
+      B.E – Computer Science and Business Systems<br>
+      Maharaja Institute of Technology
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="reveal">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Java Full Stack Development</div>
+      <div class="skill-card">Python Programming</div>
+      <div class="skill-card">Problem Solving</div>
+      <div class="skill-card">Logical Thinking</div>
+      <div class="skill-card">Leadership & Initiative</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="reveal">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <strong>Gamified Quiz Generator App</strong><br>
+        Interactive quiz application with gamification features such as scores,
+        levels, and instant feedback to improve learning engagement.
+      </li>
+      <br>
+      <li>
+        <strong>Bank Management System</strong><br>
+        Java-based console application supporting account creation, deposits,
+        withdrawals, balance enquiry, and transaction management using OOP concepts.
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="reveal">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:roopaharshitha2005@gmail.com">roopaharshitha2005@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/harshitha200531/portfolio.git" target="_blank">github.com/harshitha</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshitha-gowda-952322321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/Harshitha</a></p>
+  </section>
+
+  <footer>
+    © 2026 Harshitha S | Portfolio
+  </footer>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const sections = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight - 100;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
+</html>
